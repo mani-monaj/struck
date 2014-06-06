@@ -1,21 +1,8 @@
 TARGET	= struck
 
 CC = g++
-CFLAGS = -c -Wall -O3 -DNDEBUG
-LDFLAGS = 
-
-# /opt/local is used by MacPorts,
-# under Linux this will probably be /usr/local
-BASE_DIR := /opt/local
-
-INCLUDE_DIRS =	-I$(BASE_DIR)/include \
-				-I$(BASE_DIR)/include/eigen2
-
-LIB_DIRS = -L$(BASE_DIR)/lib
-
-LIBS =	-lopencv_core \
-		-lopencv_highgui \
-		-lopencv_imgproc
+CFLAGS = -c -Wall -O3 -DNDEBUG $(shell pkg-config --cflags eigen2 opencv)
+LDFLAGS = $(shell pkg-config --libs eigen2 opencv)
 
 SOURCES =	src/Config.cpp \
 			src/Features.cpp \
@@ -41,11 +28,11 @@ all: $(TARGET)
 -include $(DEPS)
 	
 $(TARGET): $(OBJECTS) 
-	$(CC) $(LDFLAGS) $(LIB_DIRS) $(LIBS) $(OBJECTS) -o $@
+	$(CC) $(OBJECTS) $(LDFLAGS) -o $@
 
 %.o : %.cpp
-	$(CC) $(CFLAGS) -MM -MF $(patsubst %.o,%.d,$@) $(INCLUDE_DIRS) $(INCLUDES) $<
-	$(CC) $(CFLAGS) $(INCLUDE_DIRS) $(INCLUDES) $< -o $@
+	$(CC) $(CFLAGS) -MM -MF $(patsubst %.o,%.d,$@) $<
+	$(CC) $(CFLAGS) $< -o $@
 
 clean:
 	rm -f $(OBJECTS)
