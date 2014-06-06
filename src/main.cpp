@@ -236,6 +236,7 @@ int main(int argc, char* argv[])
 			int key = waitKey(paused ? 0 : 1);
 			if (key != -1)
 			{
+                key = key & 255; // Use only last 8 bits
 				if (key == 27 || key == 113) // esc q
 				{
 					break;
