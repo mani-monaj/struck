@@ -25,7 +25,7 @@
  * 
  */
 
-#include "Config.h"
+#include "struck/Config.h"
 
 #include <fstream>
 #include <iostream>

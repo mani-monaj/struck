@@ -25,7 +25,7 @@
  * 
  */
 
-#include "MultiFeatures.h"
+#include "struck/MultiFeatures.h"
 
 using namespace Eigen;
 using namespace std;

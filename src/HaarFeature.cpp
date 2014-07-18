@@ -25,8 +25,8 @@
  * 
  */
 
-#include "HaarFeature.h"
-#include "Sample.h"
+#include "struck/HaarFeature.h"
+#include "struck/Sample.h"
 
 #include <cassert>
 #include <iostream>

@@ -25,8 +25,8 @@
  * 
  */
 
-#include "Sampler.h"
-#include "Config.h"
+#include "struck/Sampler.h"
+#include "struck/Config.h"
 
 #define _USE_MATH_DEFINES
 #include <cmath>

@@ -25,8 +25,7 @@
  * 
  */
  
-#include "Tracker.h"
-#include "Config.h"
+#include "struck/struck.h"
 
 #include <iostream>
 #include <fstream>

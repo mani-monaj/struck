@@ -25,13 +25,13 @@
  * 
  */
 
-#include "LaRank.h"
+#include "struck/LaRank.h"
 
-#include "Config.h"
-#include "Features.h"
-#include "Kernels.h"
-#include "Sample.h"
-#include "Rect.h"
+#include "struck/Config.h"
+#include "struck/Features.h"
+#include "struck/Kernels.h"
+#include "struck/Sample.h"
+#include "struck/Rect.h"
 #include "GraphUtils/GraphUtils.h"
 
 #include <Eigen/Array>

@@ -25,21 +25,21 @@
  * 
  */
 
-#include "Tracker.h"
-#include "Config.h"
-#include "ImageRep.h"
-#include "Sampler.h"
-#include "Sample.h"
+#include "struck/Tracker.h"
+#include "struck/Config.h"
+#include "struck/ImageRep.h"
+#include "struck/Sampler.h"
+#include "struck/Sample.h"
 #include "GraphUtils/GraphUtils.h"
 
-#include "HaarFeatures.h"
-#include "RawFeatures.h"
-#include "HistogramFeatures.h"
-#include "MultiFeatures.h"
+#include "struck/HaarFeatures.h"
+#include "struck/RawFeatures.h"
+#include "struck/HistogramFeatures.h"
+#include "struck/MultiFeatures.h"
 
-#include "Kernels.h"
+#include "struck/Kernels.h"
 
-#include "LaRank.h"
+#include "struck/LaRank.h"
 
 #include <opencv/cv.h>
 #include <opencv/highgui.h>

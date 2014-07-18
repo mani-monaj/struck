@@ -25,7 +25,7 @@
  * 
  */
 
-#include "ImageRep.h"
+#include "struck/ImageRep.h"
 
 #include <cassert>
 

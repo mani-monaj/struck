@@ -25,7 +25,7 @@
  * 
  */
 
-#include "Features.h"
+#include "struck/Features.h"
 
 using namespace Eigen;
 

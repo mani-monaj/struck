@@ -25,10 +25,10 @@
  * 
  */
 
-#include "HistogramFeatures.h"
-#include "Config.h"
-#include "Sample.h"
-#include "Rect.h"
+#include "struck/HistogramFeatures.h"
+#include "struck/Config.h"
+#include "struck/Sample.h"
+#include "struck/Rect.h"
 
 #include <iostream>
 

@@ -25,8 +25,8 @@
  * 
  */
 
-#include "HaarFeatures.h"
-#include "Config.h"
+#include "struck/HaarFeatures.h"
+#include "struck/Config.h"
 
 static const int kSystematicFeatureCount = 192;
 
