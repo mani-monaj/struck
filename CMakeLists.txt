@@ -3,7 +3,7 @@ find_package(PkgConfig)
 
 project(struck)
 
-set(struck_SOURCES 
+set(libstruck_SOURCES
         src/Config.cpp
         src/Features.cpp
         src/HaarFeature.cpp
@@ -15,7 +15,7 @@ set(struck_SOURCES
         src/RawFeatures.cpp
         src/Sampler.cpp
         src/Tracker.cpp
-        src/main.cpp
+#        src/main.cpp
         src/GraphUtils/GraphUtils.cpp
 )
 
@@ -27,5 +27,8 @@ find_package(OpenCV REQUIRED)
 include_directories(${EIGEN2_INCLUDE_DIRS} ${OpenCV_INCLUDE_DIRS})
 set(CMAKE_CXX_FLAGS "-Wall ${EIGEN2_CXXFLAGS_OTHER} ${OpenCV_CXXFLAGS_OTHER}")
 
-add_executable(struck ${struck_SOURCES})
-target_link_libraries(struck ${EIGEN2_LIBRARIES} ${OpenCV_LIBRARIES})
+add_library(libstruck SHARED ${libstruck_SOURCES})
+target_link_libraries(libstruck ${EIGEN2_LIBRARIES} ${OpenCV_LIBRARIES})
+
+add_executable(sample src/main.cpp)
+target_link_libraries(sample libstruck)
