@@ -6,8 +6,10 @@ cmake_minimum_required(VERSION 2.6)
 find_package(PkgConfig)
 
 project(strucktracker)
-set (strucktracker_VERSION_MAJOR 4)
-set (strucktracker_VERSION_MINOR 0)
+set(st_VERSION_MAJOR 4)
+set(st_VERSION_MINOR 0)
+set(st_VERSION_PATCH 1)
+set(st_VERSION_STRING ${st_VERSION_MAJOR}.${st_VERSION_MINOR}.${st_VERSION_PATCH})
 
 set(libstruck_SOURCES
         src/Config.cpp
@@ -33,6 +35,7 @@ include_directories("${PROJECT_SOURCE_DIR}/include" ${EIGEN2_INCLUDE_DIRS} ${Ope
 set(CMAKE_CXX_FLAGS "-Wall ${EIGEN2_CXXFLAGS_OTHER} ${OpenCV_CXXFLAGS_OTHER}")
 
 add_library(struck SHARED ${libstruck_SOURCES})
+set_target_properties(struck PROPERTIES VERSION ${st_VERSION_STRING} SOVERSION ${st_VERSION_MAJOR})
 target_link_libraries(struck ${EIGEN2_LIBRARIES} ${OpenCV_LIBRARIES})
 
 add_executable(demo examples/demo.cpp)
