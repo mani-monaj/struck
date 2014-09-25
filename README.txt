@@ -5,7 +5,7 @@ Enhancements to build system of
 - CMake based build
 - Standalone library (libstruck)
 
-$ sudo apt-get install libopencv-dev libeigen2-dev cmake build-essential
+$ sudo apt-get install libopencv-dev libcv-dev libhighgui-dev libeigen2-dev cmake build-essential
 $ mkdir build
 $ cd build
 $ cmake .. -DCMAKE_BUILD_TYPE=Release 

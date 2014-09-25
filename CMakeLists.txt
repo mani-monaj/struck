@@ -34,7 +34,7 @@ set(CMAKE_CXX_FLAGS "-Wall ${EIGEN2_CXXFLAGS_OTHER} ${OpenCV_CXXFLAGS_OTHER}")
 
 add_library(struck SHARED ${libstruck_SOURCES})
 set_target_properties(struck PROPERTIES VERSION ${st_VERSION_STRING} SOVERSION ${st_VERSION_MAJOR})
-target_link_libraries(struck ${EIGEN2_LIBRARIES} ${OpenCV_LIBRARIES})
+target_link_libraries(struck ${EIGEN2_LIBRARIES} ${OpenCV_LIBS})
 
 add_executable(demo examples/demo.cpp)
 target_link_libraries(demo struck)
