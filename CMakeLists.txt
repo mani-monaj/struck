@@ -26,8 +26,6 @@ set(libstruck_SOURCES
         src/GraphUtils/GraphUtils.cpp
 )
 
-set(CMAKE_BUILD_TYPE Release)
-
 pkg_check_modules(EIGEN2 REQUIRED eigen2)
 find_package(OpenCV REQUIRED)
 
