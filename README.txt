@@ -1,3 +1,19 @@
+Enhancements to build system of 
+"Struck: Structured Output Tracking with Kernels v4.0" 
+(http://www.samhare.net/research/struck)
+
+- CMake based build
+- Standalone library (libstruck)
+
+$ sudo apt-get install libopencv-dev libeigen2-dev cmake build-essential
+$ mkdir build
+$ cd build
+$ cmake .. -DCMAKE_BUILD_TYPE=Release 
+$ make
+$ ./demo ../examples/config.txt
+
+Original README:
+
 Struck: Structured Output Tracking with Kernels
 
 Code to accompany the paper:
